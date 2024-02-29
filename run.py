@@ -6,7 +6,7 @@ Date of the event from user input.
 """
 Event title and location input.
 """
-def enter_event_title():
+def event_title_info():
     date_info = input("Please enter the date of the event (yyyy-mm-dd)").split("-")
     print(date_info)
     year, month, day = [int(item) for item in date_info]
@@ -18,7 +18,7 @@ def enter_event_title():
     print(f"On {event_day}, {event_title} live at {event_venue}, {event_location}")
     
 
-enter_event_title()
+event_title_info()
 
 print("\nNext step. Pick a genre from below:\n")
 
@@ -35,7 +35,6 @@ Selecting a genre from the genres list.
 Loops through until user selected correct option from genres list.
 """
 def select_genre():
-    
     choice = input("Please choose a genre (in lower case): \n")
     if choice in genres:
             print(f"You chose {choice}.")
