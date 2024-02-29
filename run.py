@@ -10,6 +10,7 @@ def enter_event_title():
     event_title = input("Enter artist(s)/event.(Seperate with commas) \n")
     event_location = input("Enter location/venue \n")
     print(f"Tonight {event_title} live at {event_location}")
+    print("Next step. Pick a genre from below:\n")
 
 enter_event_title()
 
@@ -24,10 +25,17 @@ print(f"These are your genres to pick from: {genres}.\n")
 Selecting a genre from the genres list.
 """
 def select_genre():
+    
     choice = input("Please choose a genre (in lower case): \n")
     if choice in genres:
-        print(f"You chose {choice}.")
+            print(f"You chose {choice}.")
     else:
-        print("Incorrect. Please select a genre from the list. In lowercase")
-
+        while choice not in genres:
+            print(f"Incorrect input. Please select a genre (In lowercase) from the list: {genres}.")
+            choice = input("")
+            #choice += 1
+            if choice in genres:
+                print(f"You chose {choice}.")
+                break
+   
 select_genre()    
