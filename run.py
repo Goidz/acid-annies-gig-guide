@@ -1,28 +1,42 @@
-from datetime import datetime
+from datetime import date
 
-#the_date = datetime.now().date()
-#print(the_date)
+"""
+Date of the event from user input.
+"""
+def info_event():
+    date_info = input("Please enter the day of reckoning (yyyy-mm-dd)\n").split("-")
+    print(date_info)
+    year, month, day = [int(item) for item in date_info]
+    event_day = date(year, month, day)
+    print(f"The Mayhem will occur on: {event_day}")
+
+info_event()
 
 """
 Event title and location input.
 """
 def enter_event_title():
-    event_title = input("Enter artist(s)/event.(Seperate with commas) \n")
-    event_location = input("Enter location/venue \n")
-    print(f"Tonight {event_title} live at {event_location}")
-    print("Next step. Pick a genre from below:\n")
+    event_title = input("Enter artist(s)/event:\n")
+    event_venue = input("Enter location/venue:\n")
+    event_location = input("Enter city\n")
+    print(f"On this day, {event_title} live at {event_venue}, {event_location}")
+    
 
 enter_event_title()
+
+print("\nNext step. Pick a genre from below:\n")
 
 """
 List of genres for select_genre function.
 """
 genres = ["black metal", "blues", "death metal", "stoner", "rock", "doom", "thrash metal", 
 "prog", "heavy metal", "power metal", "jazz", "speed metal", "core"]
-print(f"These are your genres to pick from: {genres}.\n")
+print("These are your genres to pick from:\n")
+print(f"{genres}.")
 
 """
 Selecting a genre from the genres list.
+Loops through until user selected correct option from genres list.
 """
 def select_genre():
     
@@ -39,3 +53,4 @@ def select_genre():
                 break
    
 select_genre()    
+
