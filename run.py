@@ -3,23 +3,19 @@ from datetime import date
 """
 Date of the event from user input.
 """
-def info_event():
-    date_info = input("Please enter the day of reckoning (yyyy-mm-dd)\n").split("-")
-    print(date_info)
-    year, month, day = [int(item) for item in date_info]
-    event_day = date(year, month, day)
-    print(f"The Mayhem will occur on: {event_day}")
-
-info_event()
-
 """
 Event title and location input.
 """
 def enter_event_title():
-    event_title = input("Enter artist(s)/event:\n")
+    date_info = input("Please enter the date of the event (yyyy-mm-dd)").split("-")
+    print(date_info)
+    year, month, day = [int(item) for item in date_info]
+    event_day = date(year, month, day)
+    print(f"The Mayhem will occur on: {event_day}")
+    event_title = input("\nEnter artist(s)/event:\n")
     event_venue = input("Enter location/venue:\n")
     event_location = input("Enter city\n")
-    print(f"On this day, {event_title} live at {event_venue}, {event_location}")
+    print(f"On {event_day}, {event_title} live at {event_venue}, {event_location}")
     
 
 enter_event_title()
