@@ -52,32 +52,38 @@ def select_genre():
         while choice not in genres:
             print(f"Incorrect input. Please select a genre (In lowercase) from the list: {genres}.")
             choice = input("")
-            #choice += 1
             if choice in genres:
                 print(f"You chose {choice}.")
                 break
    
-select_genre()    
+select_genre()
 
 """
-Event title and location input.
+Function to validate text-input from user for event_title_info function.
+Text fields can not be empty so at least some characters required.
+"""
+def get_text_input(input_title, min_len=1):
+    input_is_valid = False
+    while input_is_valid is False:
+        user_input = input(input_title)
+        if user_input:
+            if len(user_input) >= min_len:
+                input_is_valid = True
+                return user_input
+            else:
+                print(f"Input should be at least {min_len} chars")
+        else:
+            print("Can't be empty")   
+
+"""
+Event title/artists and location input.
 """
 def event_title_info():
-    event_title = input("\nEnter artist(s)/event:\n")
-    event_venue = input("Enter location/venue:\n")
-    event_location = input("Enter city\n")
+    event_day = get_event_date()
+    event_title = get_text_input("\nEnter artist(s)/event:\n", 1)
+    event_venue = get_text_input("Enter location/venue:\n", 1)
+    event_location = get_text_input("Enter city\n", 2)
+    print(f"The Mayhem will occur on: {event_day}, {event_title} live at {event_venue}, {event_location}!")
 
 event_title_info()
-
-
-def print_all_functions():    
-    event_day = get_event_date()
-    event_genre = select_genre()
-    event_title_info()
-    print(f"Looking for some {event_genre}!? On {event_day}, {event_title} live at {event_venue}, {event_location}")
-    
-print_all_functions()
-
-
-
 
