@@ -37,32 +37,27 @@ def get_event_date():
                 print("Date format invalid, please follow yyyy-mm-dd")
         else:
             print("Date cant be empty, please follow yyyy-mm-dd")
-"""
+
 """
 #List of genres for select_genre function.
 """
 genres = ["black metal", "blues", "death metal", "stoner", "rock", "doom", "thrash metal", 
-"prog", "heavy metal", "power metal", "jazz", "speed metal", "core"]
-print("These are your genres to pick from:\n")
-print(f"{genres}.")
+"prog", "heavy metal", "power metal", "jazz", "speed metal", "core", "punk", ]
 
 """
-#Selecting a genre from the genres list.
-#Loops through until user selected correct option from genres list.
+Selecting a genre from the genres list.
+Is required. Loops through until user selected correct option from genres list.
 """
 def select_genre():
     user_input = input("Please choose a genre (in lower case): \n")
-    if choice in genres:
+    if user_input in genres:
             return user_input
     else:
-        while choice not in genres:
+        while user_input not in genres:
             print(f"Incorrect input. Please select a genre (In lowercase) from the list: {genres}.")
-            choice = input("")
-            if choice in genres:
+            user_input = input("")
+            if user_input in genres:
                 break
-   
-select_genre()
-"""
 
 """
 Function to validate text-input from user for event_title_info function.
@@ -103,13 +98,14 @@ Event title/artists and location input.
 """
 def event_title_info():
     event_day = get_event_date()
-    #event_genre = select_genre()
+    print(f"{genres}.")
+    event_genre = select_genre()
     event_title = get_text_input("\nEnter artist(s)/event:\n", 1)
     event_venue = get_text_input("Enter location/venue:\n", 1)
     event_location = get_text_input("Enter city\n", 3)
     artist_url = get_band_url()
-    #print(f"")
-    print(f"The Mayhem will occur on: {event_day}, {event_title} live at {event_venue}, {event_location}. You can listen them at {artist_url}")
+    print(f"On the menu today! A delicious serving of {event_genre}!")
+    print(f"The Mayhem will occur on: {event_day}, {event_title} live at {event_venue}, {event_location}. You can listen to them at {artist_url}")
 
 event_title_info()
 
