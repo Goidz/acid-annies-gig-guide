@@ -14,6 +14,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("aunty_acids_guide_to_mayhem")
 
+
 """
 Learned about validating URL input via this thread on Stackoverflow:
 https://stackoverflow.com/questions/7160737/how-to-validate-a-url-in-python-malformed-or-not
@@ -57,9 +58,9 @@ def get_event_date():
 """
 #List of genres for select_genre function.
 """
-genres = ["black metal", "blues", "death metal", "stoner", "rock",
-"doom", "thrash metal", "prog", "heavy metal", "power metal",
-"jazz", "speed metal", "core", "punk", "soul", "psychedelic"]
+genres = ["Black Metal", "Blues", "Death Metal", "Stoner", "Rock",
+"Doom", "Thrash Metal", "Prog", "Heavy Metal", "Power Metal",
+"Jazz", "Funk", "Speed Metal", "Core", "Punk", "Soul", "Psychedelic"]
 
 
 def select_genre():
@@ -67,16 +68,19 @@ def select_genre():
     Selecting a genre from the genres list.
     Is required. Loops through until user selected correct option from genres list.
     """
-    user_input = input("Please choose a genre (in lower case): \n")
-    if user_input in genres:
-        return user_input
-    else:
-        while user_input not in genres:
-            print(f"Incorrect input. Please select a genre \
-(In lowercase) from the list: {genres}.")
-            user_input = input("\n")
-            if user_input in genres:
-                break
+    user_input = input("Please choose a genre. Please Capitalize! (ex. write. Black Metal): \n") 
+    while user_input in genres:
+        if  "," in user_input:
+            user_input.split(",")
+            return user_input
+        else:
+            while user_input not in genres:
+                print(f"Incorrect input. Please select a genre \
+from the list (Please Capitalize! (ex. write. Black Metal): {genres}.")
+                user_input = input("\n")
+                if user_input in genres:
+                    break              
+    return user_input
 
 
 def get_text_input(input_title, min_len=1):
@@ -114,7 +118,7 @@ def get_url():
             if user_input == "skip":  # enables user to skip step.
                 return "Link not provided."
             else:
-                print("Invalid url")
+                print("Invalid url. Type skip to skip this option.")
 
 
 def get_url_map():  #Event location via map
@@ -129,10 +133,14 @@ def get_url_map():  #Event location via map
         if input_is_valid:
             return user_input
         else:
-            if user_input == "skip map":  # enables user to skip step.
+            if user_input == "skip":  # enables user to skip step.
                 return "Link not provided."
             else:
-                print("Invalid url")
+                print("Invalid url. Type skip to skip this option")
+
+
+def add_data():
+    SHEET.append_row([get_event_date()], table_range = "A2")
 
 
 def main():
