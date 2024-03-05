@@ -63,24 +63,25 @@ genres = ["Black Metal", "Blues", "Death Metal", "Stoner", "Rock",
 "Jazz", "Funk", "Speed Metal", "Core", "Punk", "Soul", "Psychedelic"]
 
 
-def select_genre():
+def select_genre(genres):
     """
     Selecting a genre from the genres list.
     Is required. Loops through until user selected correct option from genres list.
     """
-    user_input = input("Please choose a genre. Please Capitalize! (ex. write. Black Metal): \n") 
-    while user_input in genres:
-        if  "," in user_input:
-            user_input.split(",")
+    user_input = input("Please choose a genre. Please Capitalize! Seperate multiple entries with commas.\
+(ex. write. Black Metal, Blues): \n") 
+    if "," in user_input:
+        user_input.split(",")    
+        if user_input in genres:
             return user_input
-        else:
-            while user_input not in genres:
-                print(f"Incorrect input. Please select a genre \
-from the list (Please Capitalize! (ex. write. Black Metal): {genres}.")
-                user_input = input("\n")
-                if user_input in genres:
-                    break              
-    return user_input
+    else:
+        while user_input not in genres:
+            print(f"Incorrect input. Please select a genre \
+from the list (Please Capitalize! ex. write. Black Metal, Blues): {genres}.")
+            user_input = input("\n")
+            if user_input in genres:
+                break              
+            return user_input
 
 
 def get_text_input(input_title, min_len=1):
@@ -138,10 +139,10 @@ def get_url_map():  #Event location via map
             else:
                 print("Invalid url. Type skip to skip this option")
 
-
+"""
 def add_data():
     SHEET.append_row([get_event_date()], table_range = "A2")
-
+"""
 
 def main():
     """
@@ -149,7 +150,7 @@ def main():
     """
     event_day = get_event_date()
     print(f"{genres}.")
-    event_genre = select_genre()
+    event_genre = select_genre(genres)
     event_title = get_text_input("\nEnter artist(s)/event:\n", 1)
     event_venue = get_text_input("Enter location/venue:\n", 1)
     venue_map = get_url_map()
