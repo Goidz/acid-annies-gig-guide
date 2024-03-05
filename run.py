@@ -68,7 +68,7 @@ def select_genre(genres):
     Selecting a genre from the genres list.
     Is required. Loops through until user selected correct option from genres list.
     """
-    user_input = input("Please choose a genre. Please Capitalize! Seperate multiple entries with commas.\
+    user_input = input("\nPlease choose a genre. Please Capitalize! Seperate multiple entries with commas.\
 (ex. write. Black Metal, Blues): \n") 
     if "," in user_input:
         user_input.split(",")    
@@ -156,10 +156,16 @@ def main():
     venue_map = get_url_map()
     event_location = get_text_input("Enter city\n", 3)
     artist_url = get_url()
+    print("\nResult!\n")
     print(f"On the menu today! A delicious serving of {event_genre}!")
+    print("\n")
     print(f"The Mayhem will occur on: {event_day}, \
-{event_title} live at {event_venue},({venue_map}), {event_location}. \
-You can listen to them at {artist_url}")
+{event_title} live at {event_venue}, {event_location}.")
+    print("\nMap")
+    print(f"{venue_map}")
+    print("\nHere's a sneak peak!")
+    print(f"{artist_url}")
+    
 
 
 print("Welcome to Aunty Acid's Guide to Mayhem, a gig guide!")
