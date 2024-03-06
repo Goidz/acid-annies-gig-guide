@@ -73,9 +73,49 @@ def display_genres_options(genres):
     print("\nPlease select the event genres from below.")
     print("---- Available genres ----\n")
     for genre in genres:
-        print(f'{index} - {genre}')  # Creates an indexed list from genres[]
+        print(f"{index} - {genre}")  # Creates an indexed list from genres[]
         index = index + 1
     print("--------------------------")
+
+
+def check_if_valid_genre_option(genres, selected_genre):
+    """
+    Checks if the number entered falls within the index length.
+    Learned about .join in this article:
+    https://stackoverflow.com/questions/8270092/remove-all-whitespace-in-a-string
+    """
+    try:
+        selected_genre = ''.join(selected_genre.split())
+        selected_genre_index = int(selected_genre)
+        if (selected_genre_index < len(genres)) and (selected_genre_index > 0):
+            return True
+        return False
+    except:
+        return False
+
+
+def validate_genre_input(genres):
+    """
+    Validates user input from given genres_list options
+    Creates input as list
+    splits at ,s 
+    Calls previous function check_if_valid_genre_option()
+    Return error msg if incorrect
+    """
+    input_is_valid = False
+    while input_is_valid is False:
+        user_input = input("Select the event genres (comma separated): ")  # Asks for user input
+        errors_found = False
+        selected_genre_list = []  # Creates empty list to add correct input
+        user_input_list = user_input.split(",")  # creates new variable to split user input at ","
+        for user_input_element in user_input_list:  # Stores user input in new variable
+            if check_if_valid_genre_option(genres, user_input_element):  # Calls earlier created function to check input
+                selected_genre_list.append(int(user_input_element))  # if correct adds input as int to selected_genres_list
+            else:
+                print(f"This option is not valid: {user_input_element}")  # error msg if incorrect
+                errors_found = True
+        input_is_valid = not errors_found
+    return selected_genre_list
 
 
 """
@@ -175,8 +215,8 @@ def main():
     event_day = get_event_date()
     # print(f"{genres}.")
     event_genre = display_genres_options(genres)
-    event_title = get_text_input("\nEnter artist(s)/event:\n", 1)
-    event_venue = get_text_input("Enter location/venue:\n", 1)
+    event_title = get_text_input("\nEnter artist(s) or event name:\n", 1)
+    event_venue = get_text_input("Enter event location or venue:\n", 1)
     venue_map = get_url_map()
     event_location = get_text_input("Enter city\n", 3)
     artist_url = get_url()
