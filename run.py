@@ -69,20 +69,28 @@ def select_genre(genres):
     Is required. Loops through until user selected correct option from genres list.
     """
     user_input = input("\nPlease choose a genre. Please Capitalize! Seperate multiple entries with commas.\
-(ex. write. Black Metal, Blues): \n") 
-    if "," in user_input:
-        user_input.split(",")    
-        if user_input in genres:
-            return user_input
-    else:
-        while user_input not in genres:
+(ex. write. Black Metal, Blues): \n")
+    select_artist = user_input.split(",")
+    for select in select_artist:
+        while select not in genres:
             print(f"Incorrect input. Please select a genre \
-from the list (Please Capitalize! ex. write. Black Metal, Blues): {genres}.")
+    from the list (Please Capitalize! ex. write. Black Metal, Blues): {genres}.")
             user_input = input("\n")
-            if user_input in genres:
-                break              
-            return user_input
-
+            select_artist = user_input.split(",")
+        return select_artist
+"""
+    for select in select_artist:
+        if select in genres:
+            return select_artist
+        else:
+            while select_artist not in genres:
+                print(f"Incorrect input. Please select a genre \
+from the list (Please Capitalize! ex. write. Black Metal, Blues): {genres}.")
+                user_input = input("\n")
+                if user_input in genres:
+                    break              
+                return user_input
+"""
 
 def get_text_input(input_title, min_len=1):
     """
@@ -165,11 +173,10 @@ def main():
     print(f"{venue_map}")
     print("\nHere's a sneak peak!")
     print(f"{artist_url}")
-    
 
 
-print("Welcome to Aunty Acid's Guide to Mayhem, a gig guide!")
+print("Welcome to Aunty Acid's Guide to Mayhem, a Gig guide!")
 print("This app intends to function as a simplistic way \
 to create and upload events.")
-print("Let's get started! \n")
+print("\nLet's get started! \n")
 main()
