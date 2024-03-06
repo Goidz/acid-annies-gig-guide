@@ -16,6 +16,14 @@ SHEET = GSPREAD_CLIENT.open("aunty_acids_guide_to_mayhem")
 
 
 """
+#List of genres for select_genre function.
+"""
+genres = ["Black Metal", "Blues", "Death Metal", "Stoner", "Rock",
+"Doom", "Thrash Metal", "Prog", "Heavy Metal", "Power Metal",
+"Jazz", "Funk", "Speed Metal", "Core", "Punk", "Soul", "Psychedelic"]
+
+
+"""
 Learned about validating URL input via this thread on Stackoverflow:
 https://stackoverflow.com/questions/7160737/how-to-validate-a-url-in-python-malformed-or-not
 """
@@ -55,19 +63,27 @@ def get_event_date():
             print("Date cant be empty, please follow yyyy-mm-dd")
 
 
-"""
-#List of genres for select_genre function.
-"""
-genres = ["Black Metal", "Blues", "Death Metal", "Stoner", "Rock",
-"Doom", "Thrash Metal", "Prog", "Heavy Metal", "Power Metal",
-"Jazz", "Funk", "Speed Metal", "Core", "Punk", "Soul", "Psychedelic"]
+def display_genres_options(genres):
+    """
+    Displaying the list of genres to select as index.
+    Makes selection process easier for user as not displayed in list form.
+    Simplifies user input for later display functionality.
+    """    
+    index = 1
+    print("\nPlease select the event genres from below.")
+    print("---- Available genres ----\n")
+    for genre in genres:
+        print(f'{index} - {genre}')  # Creates an indexed list from genres[]
+        index = index + 1
+    print("--------------------------")
 
 
+"""
 def select_genre(genres):
-    """
-    Selecting a genre from the genres list.
-    Is required. Loops through until user selected correct option from genres list.
-    """
+    
+    # Selecting a genre from the genres list.
+    # Is required. Loops through until user selected correct option from genres list.
+    
     user_input = input("\nPlease choose a genre. Please Capitalize! Seperate multiple entries with commas.\
 (ex. write. Black Metal, Blues): \n")
     select_artist = user_input.split(",")
@@ -78,7 +94,7 @@ def select_genre(genres):
             user_input = input("\n")
             select_artist = user_input.split(",")
         return select_artist
-"""
+
     for select in select_artist:
         if select in genres:
             return select_artist
@@ -157,8 +173,8 @@ def main():
     Run all functions.
     """
     event_day = get_event_date()
-    print(f"{genres}.")
-    event_genre = select_genre(genres)
+    # print(f"{genres}.")
+    event_genre = display_genres_options(genres)
     event_title = get_text_input("\nEnter artist(s)/event:\n", 1)
     event_venue = get_text_input("Enter location/venue:\n", 1)
     venue_map = get_url_map()
