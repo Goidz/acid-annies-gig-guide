@@ -238,7 +238,26 @@ def add_data():
 """
 
 
-print("\nWelcome to Aunty Acid's Guide to Mayhem, a Gig guide!")
+intro_pic = """  
+/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_
+                      ..oooooo...oo.......ooooo...
+                      ..oo.......oo.......oo..oo..
+ ___ ___              ..oooo.....oo.......ooooo...             ___ ___
+|ooo|ooo|             ..oo.......oo.......oo......______      |ooo|ooo|
+|===|===|             ..oooooo...oooooo...oo.....|##:[~]|     |===|===|
+|(O)|(O)|    -,-\   Q ,      ___                _|, Q :!|=m   |(O)|(O)|
+|(O)|(O)|    / -..\/H'=i=   |###|   Q .         / .-/|::=m/   |(O)|(O)|
+|mmm|mmm|___'|__|_,-.[]|\\__|###|__/W\_\_______MKm~'/--=m/)___|mmm|mmm|
+'======='    |  |(apx) |  `~'===' (`&}=|"    _ {|\ /|   /\(   '======='
+   `~.__,-._/'\/'\`-' /'\  '._   ,'`}\ |    [M\)|-\| \ /--\'._.~
+                           .  `~(_ / //'
+                            '._MMm ,-._mMM
+_______________________________`~-'____________________________________
+"""
+# Sourced from https://www.asciiart.eu/music/other
+print(intro_pic)
+print("\n")
+print("\nWelcome to Aunty Acid's Guide to Mayhem, a Gig guide! \m/ ")
 print("This app intends to function as a simplistic way \
 to create and upload events.")
 print("\nLet's get started! \n")
