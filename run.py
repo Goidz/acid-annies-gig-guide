@@ -16,7 +16,7 @@ SHEET = GSPREAD_CLIENT.open("aunty_acids_guide_to_mayhem")
 
 
 """
-#List of genres for select_genre function.
+#List of genres for to choose from.
 """
 genres = ["Black Metal", "Blues", "Death Metal", "Stoner", "Rock",
           "Doom", "Thrash Metal", "Prog", "Heavy Metal", "Power Metal",
@@ -179,7 +179,7 @@ def get_url():
     input_is_valid = False
     while input_is_valid is False:
         user_input = input("Enter artist music link \
-(enter 'skip' to skip this step) \n")
+(type 'skip' to skip this step) \n")
         input_is_valid = re.match(url_regex, user_input) is not None
         if input_is_valid:
             return user_input
@@ -197,7 +197,7 @@ def get_url_map():  # Event location via map
     input_is_valid = False
     while input_is_valid is False:
         user_input = input("Enter venue/event location map link (Google Maps) \
-(enter skip to skip this step) \n")
+(type skip to skip this step) \n")
         input_is_valid = re.match(url_regex, user_input) is not None
         if input_is_valid:
             return user_input
@@ -207,27 +207,56 @@ def get_url_map():  # Event location via map
             else:
                 print("Invalid url. Type skip to skip this option")
 
+"""
+General info for the event.
+"""
+def general_info():
+    user_general_input = input("\nEnter a short description of the event.\n\
+Do not use the Return key. All text in same line:\n")
+    return user_general_input
+    
+
+def ticket_sales():
+    input_is_valid = False
+    while input_is_valid is False:
+        user_input = input("\nEnter ticket purchase link\
+(type 'skip' to skip this step) \n")
+        input_is_valid = re.match(url_regex, user_input) is not None
+        if input_is_valid:
+            return user_input
+        else:
+            if user_input == "skip":  # enables user to skip step.
+                return "Link not provided."
+            else:
+                print("Invalid url. Type skip to skip this option.")
+
 
 def main():
     """
     Run all functions.
     """
     event_day = get_event_date()
-    event_genre = display_selected_genres(genres), selected_genre_list()
+    event_genre = select_genre(genres)
     event_title = get_text_input("\nEnter artist(s) or event name:\n", 1)
     event_venue = get_text_input("Enter event location or venue:\n", 1)
     venue_map = get_url_map()
     event_location = get_text_input("Enter city\n", 3)
     artist_url = get_url()
+    event_gen_info = general_info()
+    event_tickets = ticket_sales()
     print("\nResult!\n")
     print(f"On the menu today! A delicious serving of {event_genre}!")
     print("\n")
     print(f"The Mayhem will occur on: {event_day}, \
 {event_title} live at {event_venue}, {event_location}.")
-    print("\nMap")
-    print(f"{venue_map}")
     print("\nHere's a sneak peak!")
     print(f"{artist_url}")
+    print("\nMap")
+    print(f"{venue_map}")
+    print("\n")
+    print(f"Info: {event_gen_info}")
+    print("\n")
+    print(f"Tickets: {event_tickets}")
     print("\n")
 
 
@@ -237,7 +266,6 @@ def add_data():
 """
 
 
-print(intro_pic)
 print("\n")
 print("\nWelcome to Aunty Acid's Guide to Mayhem, a Gig guide!")
 print("This app intends to function as a simplistic way \
