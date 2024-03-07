@@ -8,12 +8,14 @@ It is often extremely hard to find smaller shows in cities. The hope is that the
 [This is Aunty Acid's Guide to Mayhem!](https://aunty-acids-guide-to-mayhem-279b161d0d9e.herokuapp.com/)
 
 ## Project Flow Chart:
-I created a diagram, using Lucidchart, hoping to illustrate the flow of the site.
+I created a diagram, using [Lucidchart](https://lucid.co/), hoping to illustrate the flow of the site.
 Click on "Details" below:
 
 <details>
 
 ![Flowchart](docs_readme_imgs/flow_chart.jpeg)
+
+[Link to the chart in browser form](https://lucid.app/lucidchart/ea5e7718-ab19-4a36-a4eb-d163ae6fe075/edit?viewport_loc=-590%2C-1696%2C856%2C941%2C0_0&invitationId=inv_ba4934fc-9d8d-411e-b919-e3bce2f83d38)
 
 </details>
 
@@ -86,6 +88,35 @@ Following the questions the input from the user is compiled in a final message s
 
 ![Resulting message_1](docs_readme_imgs/result_one.png)
 ![Resulting message_2](docs_readme_imgs/result_two.png)
+
+### Saving data to Google Sheets:
+
+The final step in the process is for the data collected to be saved in a spreadsheet on a Google Sheets API.
+A function appends all the input data in rows under headings.
+
+
+
+## Testing:
+- Tested the code in Code Institute CI Python Linter [pep8ci](https://pep8ci.herokuapp.com/#).
+  
+  I have one error which is an E5501 error for too many characters. It's on a line of code which I am not able to split up. (Line 296 in the run.py 
+  file) The line of code is to Google Sheets which is a long row of entries.
+
+- Ran and tested the app on 2 desktop computers and two different phones.
+  The desktop computers worked perfectly fine on both Chrome and Firefox but not Safari.
+  The iphones did not run past the welcome message.
+
+- The user input were tested for all functions making sure that the error messages gets applied when neccessary and correctly.
+
+
+
+
+
+
+
+
+
+
 
 
 
