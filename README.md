@@ -52,15 +52,28 @@ Next the user is asked to enter the following:
 This hopefully encourages the user to input data, which is important in creating an informative event listing and database.)
 
 Artist or event name. Required field.
-- Validation for at least 1 character.
+- Validation for at least 1 character. Error message raised if input doesn't match.
+
 Event Location. Required field.
-- Validation for at least 1 character.
+- Validation for at least 1 character. Error message raised if input doesn't match.
+
 To enter a link with a map to the location.
-- This is not a required field and the user has the option to type "skip" to skip the step.
+- This is not a required field and the user has the option to type "skip" to skip the step. 
+ Error message raised if no input entered.
+
 The city. Required field.
-- Validation for at least 3 characters.
+- Validation for at least 3 characters. Error message raised if input doesn't match.
+
 To enter a link to the artists music or other info.
-- This is not a required field and the user has the option to type "skip" to skip the step.
+- This is not a required field and the user has the option to type "skip" to skip the step. 
+  Error message raised if no input entered.
+
+To enter a short desription or bio of the event
+- Not validated or required
+
+To enter a link to the ticket sales.
+- This is not a required field and the user has the option to type "skip" to skip the step. 
+  Error message raised if no input entered.
 
 ![Input Question Series](docs_readme_imgs/question_series.png)
 
