@@ -17,5 +17,28 @@ Click on "Details" below:
 
 ## Functionality:
 
-The app opens with a welcome message and the first input question. The date.
+### Start:
+The app opens with a welcome message and the first input question. Asking the user for the event date.
+
+
 ![Welcome message and date request](docs_readme_imgs/welcome_intro.png)
+
+The input then gets validated for the following:
+- That the field isn't empty.
+- That the length of the characters (including white space) are 10 characters long. Ex. (yyyy-mm-dd).
+- That the date uses integers.
+- That the date is seperated by dashes "-".
+Errors are raised if any of the above do not match.
+
+### Picking the genres:
+
+As soon as the date is entered an indexed list of music genres pops up.
+The user is asked to select genres seperated by commas.
+![Genre Selection List](docs_readme_imgs/genre_selection_list.png)
+
+
+
+
+
+
+
