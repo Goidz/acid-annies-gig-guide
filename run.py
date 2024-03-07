@@ -138,7 +138,7 @@ def display_selected_genres(genres, selected_genre_list):
     """
     for selected_genre in selected_genre_list:
         print(f"{selected_genre} - {genres[selected_genre -1]}")
-        # list index counts from 1 instead of 0
+        # list index counts from 0. If selection is 0 in list = 1 for user.
 
 
 def select_genre(genres):
@@ -217,7 +217,7 @@ General info for the event.
 """
 def general_info():
     user_general_input = input("\nEnter a short description of the event. (Optional)\n\
-Do not use the Return key. Type all text in same line:\n")
+Do not use the Return key as new line function. Type all text in same line:\n")
     return user_general_input
     
 
@@ -261,23 +261,26 @@ def main():
     genre_values = ''
     for genre in event_genre:
         # Prints selected genres without index numbers
-        # Count starts at 1
         print(genres[genre - 1])
         genre_values = f'{genre_values} {genres[genre - 1]},'
         # The "," at the end adds commas in google sheet.
+    print("<------------------------------------------>")
     print("\n")
     print(f"The Mayhem will occur on: {event_day}, \
 {event_title} live at {event_venue}, {event_location}.")
+    print("-------------------)
     print("\nHere's a sneak peak!")
     print(f"{artist_url}")
     print("\nMap")
     print(f"{venue_map}")
     print("\n")
+    print("-------------------")
     print("Info:\n")
     print(f"{event_gen_info}")
     print("\n")
     print(f"Tickets: {event_tickets}")
     print("\n")
+    print("<--------------------------------------------->")
     save_event(event_day, genre_values, event_title, event_venue,
     venue_map, event_location, artist_url, event_gen_info, event_tickets)
     
@@ -296,7 +299,7 @@ Learned about __name__ == "__main__" here:
 https://realpython.com/if-name-main-python/
 """
 if __name__ == "__main__":
-    print("\n")
+    print("*---*------>*---*------>*---*------>   <------*---*<------*---*<------*---*")
     print("\nWelcome to Aunty Acid's Guide to Mayhem, a Gig guide!")
     print("This app intends to function as a simplistic way \
 to create and upload events.")
