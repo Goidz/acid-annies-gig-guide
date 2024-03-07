@@ -148,6 +148,8 @@ def select_genre(genres):
     display_selected_genres(genres, selected_genre_list)
     # Calls and displays the selection
     print("-------------------------------------")
+    return selected_genre_list  
+    # Gets called in main() event_genre = select_genre(genres)
 
 
 def get_text_input(input_title, min_len=1):
@@ -192,6 +194,9 @@ def get_url():
 
 def get_url_map():  # Event location via map
     """
+    Learned about "django url validation regex"
+    via this thread on Stackoverflow same as above:
+    https://stackoverflow.com/questions/7160737/how-to-validate-a-url-in-python-malformed-or-not
     Function for URL input from user. In this case, a location map.
     """
     input_is_valid = False
@@ -211,12 +216,18 @@ def get_url_map():  # Event location via map
 General info for the event.
 """
 def general_info():
-    user_general_input = input("\nEnter a short description of the event.\n\
-Do not use the Return key. All text in same line:\n")
+    user_general_input = input("\nEnter a short description of the event. (Optional)\n\
+Do not use the Return key. Type all text in same line:\n")
     return user_general_input
     
 
 def ticket_sales():
+    """
+    Learned about "django url validation regex"
+    via this thread on Stackoverflow same as above:
+    https://stackoverflow.com/questions/7160737/how-to-validate-a-url-in-python-malformed-or-not
+    Function for ticket slaes link.
+    """
     input_is_valid = False
     while input_is_valid is False:
         user_input = input("\nEnter ticket purchase link\
@@ -244,8 +255,16 @@ def main():
     artist_url = get_url()
     event_gen_info = general_info()
     event_tickets = ticket_sales()
-    print("\nResult!\n")
-    print(f"On the menu today! A delicious serving of {event_genre}!")
+    print("\n <-------- Result! -------> \n")
+    print("On the menu today!")
+    print("A delicious serving of:")
+    genre_values = ''
+    for genre in event_genre:
+        # Prints selected genres without index numbers
+        # Count starts at 1
+        print(genres[genre - 1])
+        genre_values = f'{genre_values} {genres[genre - 1]},'
+        # The "," at the end adds commas in google sheet.
     print("\n")
     print(f"The Mayhem will occur on: {event_day}, \
 {event_title} live at {event_venue}, {event_location}.")
@@ -259,17 +278,27 @@ def main():
     print("\n")
     print(f"Tickets: {event_tickets}")
     print("\n")
+    save_event(event_day, genre_values, event_title, event_venue,
+    venue_map, event_location, artist_url, event_gen_info, event_tickets)
+    
 
+    """
+    Saves user input to Google Sheet in rows.
+    Found some assistance from AliOKeeffe's project.
+    https://github.com/AliOKeeffe/word-Py/blob/main/run.py
+    """
+def save_event(date, genre, title, venue, venue_map, city, artist_link, info, tickets):
+    SHEET.worksheet('aunty_acids_guide_to_mayhem').append_row([date.isoformat(),
+    genre, title, venue, venue_map, city, artist_link, info, tickets])
 
 """
-def add_data():
-    SHEET.append_row(event_day, table_range = "A2")
+Learned about __name__ == "__main__" here:
+https://realpython.com/if-name-main-python/
 """
-
-
-print("\n")
-print("\nWelcome to Aunty Acid's Guide to Mayhem, a Gig guide!")
-print("This app intends to function as a simplistic way \
+if __name__ == "__main__":
+    print("\n")
+    print("\nWelcome to Aunty Acid's Guide to Mayhem, a Gig guide!")
+    print("This app intends to function as a simplistic way \
 to create and upload events.")
-print("\nLet's get started! \n")
-main()
+    print("\nLet's get started! \n")
+    main()
