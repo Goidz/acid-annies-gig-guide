@@ -1,31 +1,17 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Aunty Acid's Guide to Mayhem
+This is my portfolio 3 project for the Code Institute Full-stack developer course.
 
-Welcome Gideon Horn,
+Aunty Acid's Guide to Mayhem is a simple application designed for event creation. Mainly focused on underground and lesser known artists and promoters working with them. Even small venues could benefit from this. The whole idea is to create a platform for people to quickly upload the event information which then gets stored for later use on a front-end application with search functionality. It is often extremely hard to find smaller shows in cities. The hope is that the creation of a groundroots DIY application focussing on cfostering a community that can easily follow and explore new music and in such a way grow the music scene. If we are honest, all "big bands" need to come from somewhere. If we do not try and grow the smaller scenes there will be nothing left for future generations to enjoy.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+[This is Aunty Acid's Guide to Mayhem!](https://aunty-acids-guide-to-mayhem-279b161d0d9e.herokuapp.com/)
 
-## Reminders
+## Project chart:
+I created a diagram hoping to illustrate the flow of the site.
+Click on "Details" below:
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+<details>
 
-## Creating the Heroku app
+![Flowchart](docs_readme_imgs/flow_chart.jpeg)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+</details>
 
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
