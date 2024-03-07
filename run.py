@@ -213,8 +213,7 @@ def main():
     Run all functions.
     """
     event_day = get_event_date()
-    # print(f"{genres}.")
-    event_genre = select_genre(genres)
+    event_genre = display_selected_genres(genres), selected_genre_list()
     event_title = get_text_input("\nEnter artist(s) or event name:\n", 1)
     event_venue = get_text_input("Enter event location or venue:\n", 1)
     venue_map = get_url_map()
@@ -238,26 +237,9 @@ def add_data():
 """
 
 
-intro_pic = """  
-/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_\_/_
-                      ..oooooo...oo.......ooooo...
-                      ..oo.......oo.......oo..oo..
- ___ ___              ..oooo.....oo.......ooooo...             ___ ___
-|ooo|ooo|             ..oo.......oo.......oo......______      |ooo|ooo|
-|===|===|             ..oooooo...oooooo...oo.....|##:[~]|     |===|===|
-|(O)|(O)|    -,-\   Q ,      ___                _|, Q :!|=m   |(O)|(O)|
-|(O)|(O)|    / -..\/H'=i=   |###|   Q .         / .-/|::=m/   |(O)|(O)|
-|mmm|mmm|___'|__|_,-.[]|\\__|###|__/W\_\_______MKm~'/--=m/)___|mmm|mmm|
-'======='    |  |(apx) |  `~'===' (`&}=|"    _ {|\ /|   /\(   '======='
-   `~.__,-._/'\/'\`-' /'\  '._   ,'`}\ |    [M\)|-\| \ /--\'._.~
-                           .  `~(_ / //'
-                            '._MMm ,-._mMM
-_______________________________`~-'____________________________________
-"""
-# Sourced from https://www.asciiart.eu/music/other
 print(intro_pic)
 print("\n")
-print("\nWelcome to Aunty Acid's Guide to Mayhem, a Gig guide! \m/ ")
+print("\nWelcome to Aunty Acid's Guide to Mayhem, a Gig guide!")
 print("This app intends to function as a simplistic way \
 to create and upload events.")
 print("\nLet's get started! \n")
