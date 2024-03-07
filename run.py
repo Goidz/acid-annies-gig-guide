@@ -148,7 +148,7 @@ def select_genre(genres):
     display_selected_genres(genres, selected_genre_list)
     # Calls and displays the selection
     print("-------------------------------------")
-    return selected_genre_list  
+    return selected_genre_list
     # Gets called in main() event_genre = select_genre(genres)
 
 
@@ -212,14 +212,15 @@ def get_url_map():  # Event location via map
             else:
                 print("Invalid url. Type skip to skip this option")
 
-"""
-General info for the event.
-"""
+
 def general_info():
-    user_general_input = input("\nEnter a short description of the event. (Optional)\n\
+    """
+    General info for the event.
+    """
+    user_general_input = input("\nAdd a short description. (Optional)\n\
 Do not use the Return key as new line function. Type all text in same line:\n")
     return user_general_input
-    
+
 
 def ticket_sales():
     """
@@ -264,42 +265,43 @@ def main():
         print(genres[genre - 1])
         genre_values = f'{genre_values} {genres[genre - 1]},'
         # The "," at the end adds commas in google sheet.
-    print("<------------------------------------------>")
     print("\n")
     print(f"The Mayhem will occur on: {event_day}, \
 {event_title} live at {event_venue}, {event_location}.")
-    print("-------------------")
+    print("<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>")
     print("\nHere's a sneak peak!")
     print(f"{artist_url}")
     print("\nMap")
     print(f"{venue_map}")
     print("\n")
-    print("-------------------")
     print("Info:\n")
     print(f"{event_gen_info}")
     print("\n")
     print(f"Tickets: {event_tickets}")
     print("\n")
-    print("<--------------------------------------------->")
+    print("<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>")
     save_event(event_day, genre_values, event_title, event_venue,
-    venue_map, event_location, artist_url, event_gen_info, event_tickets)
-    
+               venue_map, event_location, artist_url,
+               event_gen_info, event_tickets)
 
+
+def save_event(date, genre, title, venue, venue_map,
+               city, artist_link, info, tickets):
     """
     Saves user input to Google Sheet in rows.
     Found some assistance from AliOKeeffe's project.
     https://github.com/AliOKeeffe/word-Py/blob/main/run.py
     """
-def save_event(date, genre, title, venue, venue_map, city, artist_link, info, tickets):
-    SHEET.worksheet('aunty_acids_guide_to_mayhem').append_row([date.isoformat(),
-    genre, title, venue, venue_map, city, artist_link, info, tickets])
+    SHEET.worksheet('aunty_acids_guide_to_mayhem').append_row([date.isoformat(), genre, title, venue, venue_map, city, artist_link, info, tickets])
+    # 295: E501 line too long (147 > 79 characters). Don't know how to fix
+
 
 """
 Learned about __name__ == "__main__" here:
 https://realpython.com/if-name-main-python/
 """
 if __name__ == "__main__":
-    print("*---*------>*---*------>*---*------>   <------*---*<------*---*<------*---*")
+    ("*----->*---*------>*---*------>   <------*---*<------*---*<-----*")
     print("\nWelcome to Aunty Acid's Guide to Mayhem, a Gig guide!")
     print("This app intends to function as a simplistic way \
 to create and upload events.")
