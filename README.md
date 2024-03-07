@@ -40,6 +40,29 @@ The user is asked to select genres seperated by commas.
 The input then gets validated:
 - That the input is integers
 - That the input number is larger than 0 and within the range of the list index.
+Errors are raised if any of the above do not match.
+
+The selected genres are displayed in index form.
+
+### Follow up questions:
+
+Next the user is asked to enter the following:
+
+(Note that not all of the fields are obligatory or has "weak" validation criterea. 
+This hopefully encourages the user to input data, which is important in creating an informative event listing and database.)
+
+Artist or event name. Required field.
+- Validation for at least 1 character.
+Event Location. Required field.
+- Validation for at least 1 character.
+To enter a link with a map to the location.
+- This is not a required field and the user has the option to type "skip" to skip the step.
+The city. Required field.
+- Validation for at least 3 characters.
+To enter a link to the artists music or other info.
+- This is not a required field and the user has the option to type "skip" to skip the step.
+
+![Input Question Series](docs_readme_imgs/question_series.png)
 
 
 
