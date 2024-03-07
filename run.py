@@ -269,6 +269,7 @@ def main():
     print(f"The Mayhem will occur on: {event_day}, \
 {event_title} live at {event_venue}, {event_location}.")
     print("<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>")
+    # Border by: https://www.asciiart.eu/art-and-design/dividers
     print("\nHere's a sneak peak!")
     print(f"{artist_url}")
     print("\nMap")
