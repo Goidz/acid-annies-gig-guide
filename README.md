@@ -18,8 +18,9 @@ Click on "Details" below:
 ## Functionality:
 
 ### Start:
-The app opens with a welcome message and the first input question. Asking the user for the event date.
 
+The app opens with a welcome message and the first input question. 
+Asking the user for the event date.
 
 ![Welcome message and date request](docs_readme_imgs/welcome_intro.png)
 
@@ -35,6 +36,12 @@ Errors are raised if any of the above do not match.
 As soon as the date is entered an indexed list of music genres pops up.
 The user is asked to select genres seperated by commas.
 ![Genre Selection List](docs_readme_imgs/genre_selection_list.png)
+
+The input then gets validated:
+- That the input is integers
+- That the input number is larger than 0 and within the range of the list index.
+
+
 
 
 
