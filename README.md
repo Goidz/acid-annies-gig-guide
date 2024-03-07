@@ -6,7 +6,7 @@ Aunty Acid's Guide to Mayhem is a simple application designed for event creation
 [This is Aunty Acid's Guide to Mayhem!](https://aunty-acids-guide-to-mayhem-279b161d0d9e.herokuapp.com/)
 
 ## Project chart:
-I created a diagram hoping to illustrate the flow of the site.
+I created a diagram, using Lucidchart, hoping to illustrate the flow of the site.
 Click on "Details" below:
 
 <details>
@@ -15,3 +15,7 @@ Click on "Details" below:
 
 </details>
 
+## Functionality:
+
+The app opens with a welcome message and the first input question. The date.
+![Welcome message and date request](docs_readme_imgs/welcome_intro.png)
