@@ -1,31 +1,130 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Aunty Acid's Guide to Mayhem
+This is my portfolio 3 project for the Code Institute Full-stack developer course.
 
-Welcome Gideon Horn,
+Aunty Acid's Guide to Mayhem is a simple application designed for creating and then storing events. Mainly focused on underground and lesser known artists and promoters working with them. Even small venues could benefit from this. The whole idea is to create a platform for people to quickly upload the event information which then gets stored for later use on a front-end application with search functionality. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+It is often extremely hard to find smaller shows in cities. The hope is that the creation of a groundroots, DIY application focussing on fostering a community that can easily follow and explore new music and in such a way grow the music scene. If we are honest, all "big bands" need to come from somewhere. If we do not try and grow the smaller scenes there will be nothing left for future generations to enjoy.
 
-## Reminders
+[This is Aunty Acid's Guide to Mayhem!](https://aunty-acids-guide-to-mayhem-279b161d0d9e.herokuapp.com/)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Project Flow Chart:
+I created a diagram, using [Lucidchart](https://lucid.co/), hoping to illustrate the flow of the site.
+Click on "Details" below:
 
-## Creating the Heroku app
+<details>
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+![Flowchart](docs_readme_imgs/flow_chart.jpeg)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+[Link to the chart in browser form](https://lucid.app/lucidchart/ea5e7718-ab19-4a36-a4eb-d163ae6fe075/edit?viewport_loc=-590%2C-1696%2C856%2C941%2C0_0&invitationId=inv_ba4934fc-9d8d-411e-b919-e3bce2f83d38)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+</details>
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
+## Functionality:
 
-## Constraints
+### Start:
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+The app opens with a welcome message and the first input question. 
+Asking the user for the event date.
 
------
-Happy coding!
+![Welcome message and date request](docs_readme_imgs/welcome_intro.png)
+
+The input then gets validated for the following:
+- That the field isn't empty.
+- That the length of the characters (including white space) are 10 characters long. Ex. (yyyy-mm-dd).
+- That the date uses integers.
+- That the date is seperated by dashes "-".
+
+Errors are raised if any of the above do not match.
+
+
+
+
+### Picking the genres:
+
+As soon as the date is entered an indexed list of music genres pops up.
+The user is asked to select genres seperated by commas.
+![Genre Selection List](docs_readme_imgs/genre_selection_list.png)
+
+The input then gets validated:
+- That the input is integers
+- That the input number is larger than 0 and within the range of the list index.
+Errors are raised if any of the above do not match.
+
+The selected genres are displayed.
+
+### Follow up questions:
+
+Next the user is asked to enter the following:
+
+(Note that not all of the fields are obligatory or has "weak" validation criterea. 
+This hopefully encourages the user to input data, which is important in creating an informative event listing and database.)
+
+Artist or event name. Required field.
+- Validation for at least 1 character. Error message raised if input doesn't match.
+
+Event Location. Required field.
+- Validation for at least 1 character. Error message raised if input doesn't match.
+
+To enter a link with a map to the location.
+- This is not a required field and the user has the option to type "skip" to skip the step. 
+ Error message raised if no input entered asking to enter valid URL or type "skip"
+
+The city. Required field.
+- Validation for at least 3 characters. Error message raised if input doesn't match.
+
+To enter a link to the artists music or other info.
+- This is not a required field and the user has the option to type "skip" to skip the step. 
+  Error message raised if no input entered asking to enter valid URL or type "skip".
+
+To enter a short desription or bio of the event
+- Not validated or required
+
+To enter a link to the ticket sales.
+- This is not a required field and the user has the option to type "skip" to skip the step. 
+  Error message raised if no input entered asking to enter valid URL or type "skip".
+
+![Input Question Series](docs_readme_imgs/question_series.png)
+
+### Execution of user input:
+
+Following the questions the input from the user is compiled in a final message showing the information that was entered.
+
+![Resulting message_1](docs_readme_imgs/result_one.png)
+![Resulting message_2](docs_readme_imgs/result_two.png)
+
+### Saving data to Google Sheets:
+
+The final step in the process is for the data collected to be saved in a spreadsheet on a Google Sheets API.
+A function appends all the input data in rows under headings.
+
+
+
+## Testing:
+- Tested the code in Code Institute CI Python Linter [pep8ci](https://pep8ci.herokuapp.com/#).
+  
+  I have one error which is an E5501 error for too many characters. It's on a line of code which I am not able to split up. (Line 296 in the run.py 
+  file) The line of code is to Google Sheets which is a long row of entries.
+
+- Ran and tested the app on 2 desktop computers and two different phones.
+  The desktop computers worked perfectly fine on both Chrome and Firefox but not Safari.
+  The iphones did not run past the welcome message.
+
+- The user input were tested for all functions making sure that the error messages gets applied when neccessary and correctly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
