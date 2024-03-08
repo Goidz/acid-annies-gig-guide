@@ -53,6 +53,8 @@ The input then gets validated for the following:
 
 </details>
 
+
+
 ### Picking the genres:
 
 As soon as the date is entered an indexed list of music genres pops up.
@@ -65,6 +67,17 @@ The input then gets validated:
 Errors are raised if any of the above do not match.
 
 The selected genres are displayed.
+
+
+### Errors for genre selection:(Click "Details")
+
+<details>
+
+![Invalid_genre_input](docs_readme_imgs/invalid_genre_input.png)
+
+</details>
+
+
 
 ### Follow up questions:
 
