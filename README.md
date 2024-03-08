@@ -156,6 +156,17 @@ A function appends all the input data to the spreadsheet, where the information 
 - Python
 
 
+## Libraries Used:
+
+- Datetime.date for date input
+
+- re for URL input validation
+
+- gspread for Google Sheets communication
+
+- google.oauth2.service_account for credentials
+
+
 ## Testing, errors and fixes:
 
 - Validated the code in Code Institute CI Python Linter [pep8ci](https://pep8ci.herokuapp.com/#).
