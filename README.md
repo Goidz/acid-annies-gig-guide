@@ -35,8 +35,23 @@ The input then gets validated for the following:
 - That the date uses integers.
 - That the date is seperated by dashes "-".
 
-Errors are raised if any of the above do not match.
+### Date Errors:(Click "Details")
 
+<details>
+ 
+ Error raised invalid_date_format:
+
+![Error raised invalid_date_format](docs_readme_imgs/invalid_date_format.png)
+
+ Error raised empty_date_field:
+ 
+![Error raised empty_date_field](docs_readme_imgs/empty_date_error.png)
+
+ Error raised date_seperator_invalid:
+
+![Error raised date_seperator_invalid](docs_readme_imgs/date_seperator_invalid.png)
+
+</details>
 
 
 
@@ -53,6 +68,19 @@ Errors are raised if any of the above do not match.
 
 The selected genres are displayed.
 
+
+### Errors for genre selection:(Click "Details")
+
+<details>
+
+Invalid genre input error:
+
+![Invalid_genre_input](docs_readme_imgs/invalid_genre_input.png)
+
+</details>
+
+
+
 ### Follow up questions:
 
 Next the user is asked to enter the following:
@@ -61,17 +89,17 @@ Next the user is asked to enter the following:
 This hopefully encourages the user to input data, which is important in creating an informative event listing and database.)
 
 Artist or event name. Required field.
-- Validation for at least 1 character. Error message raised if input doesn't match.
+- Validation for at least 1 character. Text-error message raised if input is empty.
 
 Event Location. Required field.
-- Validation for at least 1 character. Error message raised if input doesn't match.
+- Validation for at least 1 character. Text-error message raised if input is empty.
 
 To enter a link with a map to the location.
 - This is not a required field and the user has the option to type "skip" to skip the step. 
  Error message raised if no input entered asking to enter valid URL or type "skip"
 
 The city. Required field.
-- Validation for at least 3 characters. Error message raised if input doesn't match.
+- Validation for at least 3 characters. Text-error message raised if input is empty.
 
 To enter a link to the artists music or other info.
 - This is not a required field and the user has the option to type "skip" to skip the step. 
@@ -86,6 +114,24 @@ To enter a link to the ticket sales.
 
 ![Input Question Series](docs_readme_imgs/question_series.png)
 
+
+### Errors for follow up questions: (Click "Details")
+
+
+<details>
+
+Invalid text input - Empty field error:
+
+![Invalid text input_Empty field](docs_readme_imgs/invalid_text_input.png)
+
+Empty URL field error:
+
+![Empty URL field](docs_readme_imgs/invalid_empty_URL.png)
+ 
+
+</details>
+
+
 ### Execution of user input:
 
 Following the questions the input from the user is compiled in a final message showing the information that was entered.
@@ -93,10 +139,13 @@ Following the questions the input from the user is compiled in a final message s
 ![Resulting message_1](docs_readme_imgs/result_one.png)
 ![Resulting message_2](docs_readme_imgs/result_two.png)
 
+
 ### Saving data to Google Sheets:
 
-The final step in the process is for the data collected to be saved in a spreadsheet on a Google Sheets API.
-A function appends all the input data in rows under headings.
+The final step in the process is for the user input to be saved in a spreadsheet on a Google Sheets API.
+A function appends all the input data to the spreadsheet, where the information is sorted by column and each line corresponds to an event. In this way, the input data can be pulled up in a hypothetical app where users can search for events by applying filters such as date, ganre, or location.
+
+
 
 
 
@@ -111,6 +160,8 @@ A function appends all the input data in rows under headings.
   The iphones did not run past the welcome message.
 
 - The user input were tested for all functions making sure that the error messages gets applied when neccessary and correctly.
+
+- Used [Python Tutor](https://pythontutor.com/cp/composingprograms.html#mode=edit) for problem solving help.
 
 
 
