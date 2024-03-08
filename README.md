@@ -205,8 +205,22 @@ A function appends all the input data to the spreadsheet, where the information 
 - Fixed grammar and typing errors using [Grammarly](https://www.grammarly.com/) 
  
 
+## Future features and Outlook:
 
-## Acknowledgements:
+### Short term:
+
+- Enable the possibility to upload an image (event poster).
+
+- Add more genres to the genres selection list.
+
+- Consider adding more input catagories to increase the number of search filters in the future. For example specifying the type of event based on parameters for example. Festivals or events targeting certain groups.  This provides the user with more search possibilities. In addition, this would allow the organisers to better reach out to potential interested attendees
+
+### Long term:
+
+- Create a user friendy front end application that is linked to the stored event data Google sheet to enable easy filtering of events according to different parameters. For example. Date, Genre and location. 
+
+
+## Acknowledgements and Resources:
 
 - My tutor, Antonio Rodriguez, for guidance and patient explanations!
 
@@ -227,6 +241,8 @@ A function appends all the input data to the spreadsheet, where the information 
 - Used [Grammarly](https://www.grammarly.com/) for grammar checking.
 
 - Utilised [CI Python Linter](https://pep8ci.herokuapp.com/#) for pep8 validation.
+
+- [GitHub](https://github.com/) for version control.
 
 - Used [Heroku](https://id.heroku.com/login) for deployment.
 
