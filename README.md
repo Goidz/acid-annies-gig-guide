@@ -150,6 +150,11 @@ A function appends all the input data to the spreadsheet, where the information 
 [Live link to the Google Sheet](https://docs.google.com/spreadsheets/d/1Py7E96MvonBkDE_-dVUzPwbTptsujlIhDiSimhyUU8w/edit?usp=sharing)
 
 
+## Programming Languages used:
+
+- Python
+
+
 ## Testing, errors and fixes:
 
 - Validated the code in Code Institute CI Python Linter [pep8ci](https://pep8ci.herokuapp.com/#).
@@ -164,25 +169,38 @@ A function appends all the input data to the spreadsheet, where the information 
  
 </details>
 
-  I had several indentation and whitespace errors which I fixed.
+- I had several indentation and whitespace errors which I fixed using CI pep8 linter as guide.
 
-  Had a bare except error which was fixed by specifying the type of error that is expected. In this case a ValueError.
+- Had a bare except error which was fixed by specifying the type of error that is expected. In this case a ValueError.
+
+- Struggled to get URL inputs to function. Eventually found help online and imported URL Validator Regex.
+
+- Had some problems with some of the date validation. Specifically "fromisoformat". Found some help online.
+
+- Had a problem trying to allow genres entered without spacing. Used .join to solve this by removing whitespace.
   
-- Ran and tested the app on 2 desktop computers and two different phones.
+- Ran and tested the app on 2 desktop computers.
   The desktop computers worked perfectly fine on both Chrome and Firefox but not Safari.
-  The iphones did not run past the welcome message.
-
+  
 - The user input were tested for all functions making sure that the error messages gets applied when neccessary and correctly.
 
-- Tested the Google Sheets by repeatingly running the program and getting the correct results. 
+- Tested the Google Sheet by repeatingly running the program and getting the correct results. 
 
 - Used [Python Tutor](https://pythontutor.com/cp/composingprograms.html#mode=edit) for problem solving help.
 
-- Tested all external andd image links provided in the readme file.
+- Tested all external and image links provided in the readme file.
 
-- Fixed grammer and typing errors using [Grammarly](https://www.grammarly.com/) 
+- Fixed grammar and typing errors using [Grammarly](https://www.grammarly.com/) 
  
 
+
+## Acknowledgements:
+
+- My tutor, Antonio Rodriguez, for guidance and
+
+- Learnt about Django Regex URL validation here: [Regex URL Validation](https://stackoverflow.com/questions/7160737/how-to-validate-a-url-in-python-malformed-or-not)
+
+- 
 
 
 
