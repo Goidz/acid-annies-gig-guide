@@ -1,7 +1,7 @@
 # Aunty Acid's Guide to Mayhem
-This is my portfolio 3 project for the Code Institute Full-stack developer course.
+This is my portfolio 3 project for the Code Institute Full-stack Developer course.
 
-Aunty Acid's Guide to Mayhem is a simple application designed for creating and then storing events. Mainly focused on underground and lesser known artists and promoters working with them. Even small venues could benefit from this. The whole idea is to create a platform for people to quickly upload the event information which then gets stored for later use on a front-end application with search functionality. 
+Aunty Acid's Guide to Mayhem is a simple application designed for creating and then storing events. Mainly focused on underground and lesser-known artists and promoters working with them. Even small venues could benefit from this. The whole idea is to create a platform for people to quickly upload the event information which then gets stored for later use on a front-end application with search functionality. 
 
 It is often extremely hard to find smaller shows in cities. The hope is that the creation of a groundroots, DIY application focussing on fostering a community that can easily follow and explore new music and in such a way grow the music scene. If we are honest, all "big bands" need to come from somewhere. If we do not try and grow the smaller scenes there will be nothing left for future generations to enjoy.
 
@@ -33,7 +33,7 @@ The input then gets validated for the following:
 - That the field isn't empty.
 - That the length of the characters (including white space) are 10 characters long. Ex. (yyyy-mm-dd).
 - That the date uses integers.
-- That the date is seperated by dashes "-".
+- That the date is separated by dashes "-".
 
 ### Date Errors:(Click "Details")
 
@@ -58,7 +58,7 @@ The input then gets validated for the following:
 ### Picking the genres:
 
 As soon as the date is entered an indexed list of music genres pops up.
-The user is asked to select genres seperated by commas.
+The user is asked to select genres separated by commas.
 ![Genre Selection List](docs_readme_imgs/genre_selection_list.png)
 
 The input then gets validated:
@@ -81,31 +81,31 @@ Invalid genre input error:
 
 
 
-### Follow up questions:
+### Follow-up questions:
 
-Next the user is asked to enter the following:
+Next, the user is asked to enter the following:
 
-(Note that not all of the fields are obligatory or has "weak" validation criterea. 
+(Note that not all of the fields are obligatory or have "weak" validation criteria. 
 This hopefully encourages the user to input data, which is important in creating an informative event listing and database.)
 
 Artist or event name. Required field.
-- Validation for at least 1 character. Text-error message raised if input is empty.
+- Validation for at least 1 character. Text-error message raised if the input is empty.
 
 Event Location. Required field.
-- Validation for at least 1 character. Text-error message raised if input is empty.
+- Validation for at least 1 character. Text-error message raised if the input is empty.
 
 To enter a link with a map to the location.
 - This is not a required field and the user has the option to type "skip" to skip the step. 
  Error message raised if no input entered asking to enter valid URL or type "skip"
 
 The city. Required field.
-- Validation for at least 3 characters. Text-error message raised if input is empty.
+- Validation for at least 3 characters. Text-error message raised if the input is empty.
 
-To enter a link to the artists music or other info.
+To enter a link to the artist's music or other info.
 - This is not a required field and the user has the option to type "skip" to skip the step. 
   Error message raised if no input entered asking to enter valid URL or type "skip".
 
-To enter a short desription or bio of the event
+To enter a short description or bio of the event
 - Not validated or required
 
 To enter a link to the ticket sales.
@@ -115,7 +115,7 @@ To enter a link to the ticket sales.
 ![Input Question Series](docs_readme_imgs/question_series.png)
 
 
-### Errors for follow up questions: (Click "Details")
+### Errors for follow-up questions: (Click "Details")
 
 
 <details>
@@ -167,11 +167,11 @@ A function appends all the input data to the spreadsheet, where the information 
 - google.oauth2.service_account for credentials
 
 
-## Testing, errors and fixes:
+## Testing, errors, and fixes:
 
 - Validated the code in Code Institute CI Python Linter [pep8ci](https://pep8ci.herokuapp.com/#).
   
-  I have one error which is an E501 error for a too long line of code. It's on a line of code which I am not able to split up. (Line 296 in the run.py 
+  I have one error which is an E501 error for a too long line of code. It's on a line of code that I am not able to split up. (Line 296 in the run.py 
   file) The line of code appends input information to a Google Sheet which is a long row of entries. I do not know how to split this line of code. I am worried it 
   might affect the execution. (Click Details)
 
@@ -181,7 +181,7 @@ A function appends all the input data to the spreadsheet, where the information 
  
 </details>
 
-- I had several indentation and whitespace errors which I fixed using CI pep8 linter as guide.
+- I had several indentation and whitespace errors which I fixed using CI pep8 linter as a guide.
 
 - Had a bare except error which was fixed by specifying the type of error that is expected. In this case a ValueError.
 
@@ -194,11 +194,11 @@ A function appends all the input data to the spreadsheet, where the information 
 - Ran and tested the app on 2 desktop computers.
   The desktop computers worked perfectly fine on both Chrome and Firefox but not Safari.
   
-- The user input were tested for all functions making sure that the error messages gets applied when neccessary and correctly.
+- The user input was tested for all functions making sure that the error messages were applied when necessary and correctly.
 
-- Tested the Google Sheet by repeatingly running the program and getting the correct results. 
+- Tested the Google Sheet by repeatedly running the program and getting the correct results. 
 
-- Used [Python Tutor](https://pythontutor.com/cp/composingprograms.html#mode=edit) for problem solving help.
+- Used [Python Tutor](https://pythontutor.com/cp/composingprograms.html#mode=edit) for problem-solving help.
 
 - Tested all external and image links provided in the readme file.
 
@@ -213,18 +213,18 @@ A function appends all the input data to the spreadsheet, where the information 
 
 - Add more genres to the genres selection list.
 
-- Consider adding more input catagories to increase the number of search filters in the future. For example specifying the type of event based on parameters such as festivals or events targeting certain groups.  This provides the user with more search possibilities. In addition, this would allow the organisers to better reach out to potential interested attendees
+- Consider adding more input categories to increase the number of search filters in the future. For example, specifying the type of event based on parameters such as festivals or events targeting certain groups.  This provides the user with more search possibilities. In addition, this would allow the organisers to better reach out to potentially interested attendees
 
 ### Long term:
 
-- Create a user friendy front end application that is linked to the stored event data Google sheet to enable easy filtering of events according to different parameters. For example. Date, Genre and location. 
+- Create a user friendly front-end application that is linked to the stored event data Google sheet to enable easy filtering of events according to different parameters. For example. Date, Genre and, location. 
 
 
-## Acknowledgements and Resources:
+## Acknowledgments and Resources:
 
 - My tutor, Antonio Rodriguez, for guidance and patient explanations!
 
-- Learnt about Django Regex URL validation from this thread: [Regex URL Validation](https://stackoverflow.com/questions/7160737/how-to-validate-a-url-in-python-malformed-or-not)
+- Learned about Django Regex URL validation from this thread: [Regex URL Validation](https://stackoverflow.com/questions/7160737/how-to-validate-a-url-in-python-malformed-or-not)
 
 - Learned about __name__ == "__main__" [here:](https://realpython.com/if-name-main-python/)
 
@@ -240,7 +240,7 @@ A function appends all the input data to the spreadsheet, where the information 
 
 - Used [Grammarly](https://www.grammarly.com/) for grammar checking.
 
-- Utilised [CI Python Linter](https://pep8ci.herokuapp.com/#) for pep8 validation.
+- Utilized [CI Python Linter](https://pep8ci.herokuapp.com/#) for pep8 validation.
 
 - [GitHub](https://github.com/) for version control.
 
@@ -248,9 +248,9 @@ A function appends all the input data to the spreadsheet, where the information 
 
 - Found some assistance to correctly access Google Sheets from [AliOKeeffe's project.](https://github.com/AliOKeeffe/word-Py/blob/main/run.py)
 
-- Had assistence with [bare except clause error](https://www.30secondsofcode.org/python/s/bare-except/).
+- Had assistance with [bare except clause error](https://www.30secondsofcode.org/python/s/bare-except/).
 
-- Used a devider from [Ascii Art](https://www.asciiart.eu/art-and-design/dividers)
+- Used a divider from [Ascii Art](https://www.asciiart.eu/art-and-design/dividers)
 
 - General learning [W3Schools](https://www.w3schools.com/)
 
@@ -275,7 +275,7 @@ A function appends all the input data to the spreadsheet, where the information 
 
 - Scroll back to the top of the page and click "Deploy"
 
-- Select GitHub as deploy method and search for the repository. Click Connect.
+- Select GitHub as the deploy method and search for the repository. Click Connect.
 
 - Click "Enable Automatic Deploys"
 
