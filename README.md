@@ -147,6 +147,7 @@ A function appends all the input data to the spreadsheet, where the information 
 
 
 ![User input data saved to a Google Sheet.](docs_readme_imgs/google_data_sheet.png)
+
 [Live link to the Google Sheet](https://docs.google.com/spreadsheets/d/1Py7E96MvonBkDE_-dVUzPwbTptsujlIhDiSimhyUU8w/edit?usp=sharing)
 
 
@@ -196,9 +197,11 @@ A function appends all the input data to the spreadsheet, where the information 
 
 ## Acknowledgements:
 
-- My tutor, Antonio Rodriguez, for guidance and
+- My tutor, Antonio Rodriguez, for guidance and patient explanations!
 
 - Learnt about Django Regex URL validation from this thread: [Regex URL Validation](https://stackoverflow.com/questions/7160737/how-to-validate-a-url-in-python-malformed-or-not)
+
+- Learned about __name__ == "__main__" [here:](https://realpython.com/if-name-main-python/)
 
 - Had assistance with date validation from this thread: [.fromisoformat](https://stackoverflow.com/questions/16870663/how-do-i-validate-a-date-string-format-in-python)
 
@@ -220,10 +223,40 @@ A function appends all the input data to the spreadsheet, where the information 
 
 - Had assistence with [bare except clause error](https://www.30secondsofcode.org/python/s/bare-except/).
 
-- Used a devider from [Ascii Art](https://www.asciiart.eu/art-and-design/dividers)  
+- Used a devider from [Ascii Art](https://www.asciiart.eu/art-and-design/dividers)
+
+- General learning [W3Schools](https://www.w3schools.com/)
+
+- 
 
 
+## Deployment:
 
+- Log in to Heroku and click "New" in the top right corner and click "Create new App".
+
+- Select a unique name and pick your region, click "Create App".
+
+- Click the settings tab and click "Reveal Convig Vars"
+
+- Type "port" in the Key field and "8000" in the Value field. Click add.
+
+- Type "CREDS" in the Key field and add your Google Sheet API creds file to the Value field. Click add.
+
+- Next click on "Build Packs" underneath Convig Vars section and, in this order, add:
+  Python first
+  Nodejs second.
+
+- Scroll back to the top of the page and click "Deploy"
+
+- Select GitHub as deploy method and search for the repository. Click Connect.
+
+- Click "Enable Automatic Deploys"
+
+- Click deploy branch. Wait for a little while.
+
+- Click View.
+
+  
 
 
 
