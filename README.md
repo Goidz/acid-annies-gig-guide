@@ -213,7 +213,7 @@ A function appends all the input data to the spreadsheet, where the information 
 
 - Add more genres to the genres selection list.
 
-- Consider adding more input catagories to increase the number of search filters in the future. For example specifying the type of event based on parameters for example. Festivals or events targeting certain groups.  This provides the user with more search possibilities. In addition, this would allow the organisers to better reach out to potential interested attendees
+- Consider adding more input catagories to increase the number of search filters in the future. For example specifying the type of event based on parameters such as festivals or events targeting certain groups.  This provides the user with more search possibilities. In addition, this would allow the organisers to better reach out to potential interested attendees
 
 ### Long term:
 
