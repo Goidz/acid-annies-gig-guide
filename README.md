@@ -34,7 +34,11 @@ The input then gets validated for the following:
 - That the length of the characters (including white space) are 10 characters long. Ex. (yyyy-mm-dd).
 - That the date uses integers.
 - That the date is seperated by dashes "-".
+
 Errors are raised if any of the above do not match.
+
+
+
 
 ### Picking the genres:
 
