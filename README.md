@@ -198,11 +198,25 @@ A function appends all the input data to the spreadsheet, where the information 
 
 - My tutor, Antonio Rodriguez, for guidance and
 
-- Learnt about Django Regex URL validation here: [Regex URL Validation](https://stackoverflow.com/questions/7160737/how-to-validate-a-url-in-python-malformed-or-not)
+- Learnt about Django Regex URL validation from this thread: [Regex URL Validation](https://stackoverflow.com/questions/7160737/how-to-validate-a-url-in-python-malformed-or-not)
 
-- 
+- Had assistance with date validation from this thread: [.fromisoformat](https://stackoverflow.com/questions/16870663/how-do-i-validate-a-date-string-format-in-python)
 
+- Had assistance with .join for the list selection from this thread [White space removal](https://stackoverflow.com/questions/8270092/remove-all-whitespace-in-a-string)
 
+- Used Google APIs for the Google Sheets spreadsheet. [Google Sheets API](https://console.cloud.google.com/apis/api/sheets.googleapis.com/metrics?project=aunty-acids-guide-to-mayhem)
+
+- Used [Python Tutor](https://pythontutor.com/) for problem solving.
+
+- Used [Lucid chart](https://lucid.co/) for the Flow chart.
+
+- Used [Grammarly](https://www.grammarly.com/) for grammar checking.
+
+- Utilised [CI Python Linter](https://pep8ci.herokuapp.com/#) for pep8 validation.
+
+- Used [Heroku](https://id.heroku.com/login) for deployment.
+
+- Found some assistance to correctly access Google Sheets from [AliOKeeffe's project.](https://github.com/AliOKeeffe/word-Py/blob/main/run.py)
 
 
 
