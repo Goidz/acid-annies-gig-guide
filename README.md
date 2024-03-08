@@ -156,7 +156,13 @@ A function appends all the input data to the spreadsheet, where the information 
   
   I have one error which is an E501 error for a too long line of code. It's on a line of code which I am not able to split up. (Line 296 in the run.py 
   file) The line of code appends input information to a Google Sheet which is a long row of entries. I do not know how to split this line of code. I am worried it 
-  might affect the execution.
+  might affect the execution. (Click Details)
+
+<details>
+
+
+ 
+</details>
 
   I had several indentation and whitespace errors which I fixed.
 
