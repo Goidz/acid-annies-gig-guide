@@ -35,10 +35,23 @@ The input then gets validated for the following:
 - That the date uses integers.
 - That the date is seperated by dashes "-".
 
-Errors are raised if any of the above do not match.
+### Date Errors:(Click "Details")
 
+<details>
+ 
+ Error raised invalid_date_format:
 
+![Error raised invalid_date_format](docs_readme_imgs/invalid_date_format.png)
 
+ Error raised empty_date_field:
+ 
+![Error raised empty_date_field](docs_readme_imgs/empty_date_error.png)
+
+ Error raised date_seperator_invalid:
+
+![Error raised date_seperator_invalid](docs_readme_imgs/date_seperator_invalid.png)
+
+</details>
 
 ### Picking the genres:
 
