@@ -143,25 +143,37 @@ Following the questions the input from the user is compiled in a final message s
 ### Saving data to Google Sheets:
 
 The final step in the process is for the user input to be saved in a spreadsheet on a Google Sheets API.
-A function appends all the input data to the spreadsheet, where the information is sorted by column and each line corresponds to an event. In this way, the input data can be pulled up in a hypothetical app where users can search for events by applying filters such as date, ganre, or location.
+A function appends all the input data to the spreadsheet, where the information is sorted by column and each line corresponds to an event. In this way, the input data can be pulled up in a hypothetical app where users can search for events by applying filters such as date, genre, or location.
 
 
+![User input data saved to a Google Sheet.](docs_readme_imgs/google_data_sheet.png)
+[Live link to the Google Sheet](https://docs.google.com/spreadsheets/d/1Py7E96MvonBkDE_-dVUzPwbTptsujlIhDiSimhyUU8w/edit?usp=sharing)
 
 
+## Testing, errors and fixes:
 
-## Testing:
-- Tested the code in Code Institute CI Python Linter [pep8ci](https://pep8ci.herokuapp.com/#).
+- Validated the code in Code Institute CI Python Linter [pep8ci](https://pep8ci.herokuapp.com/#).
   
-  I have one error which is an E5501 error for too many characters. It's on a line of code which I am not able to split up. (Line 296 in the run.py 
-  file) The line of code is to Google Sheets which is a long row of entries.
+  I have one error which is an E501 error for a too long line of code. It's on a line of code which I am not able to split up. (Line 296 in the run.py 
+  file) The line of code appends input information to a Google Sheet which is a long row of entries. I do not know how to split this line of code. I am worried it 
+  might affect the execution.
 
+  I had several indentation and whitespace errors which I fixed.
+
+  Had a bare except error which was fixed by specifying the type of error that is expected. In this case a ValueError.
+  
 - Ran and tested the app on 2 desktop computers and two different phones.
   The desktop computers worked perfectly fine on both Chrome and Firefox but not Safari.
   The iphones did not run past the welcome message.
 
 - The user input were tested for all functions making sure that the error messages gets applied when neccessary and correctly.
 
+- Tested the Google Sheets by repeatingly running the program and getting the correct results. 
+
 - Used [Python Tutor](https://pythontutor.com/cp/composingprograms.html#mode=edit) for problem solving help.
+
+- Tested all external andd image links provided in the readme file.
+ 
 
 
 
