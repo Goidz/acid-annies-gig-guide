@@ -218,6 +218,10 @@ A function appends all the input data to the spreadsheet, where the information 
 
 - Found some assistance to correctly access Google Sheets from [AliOKeeffe's project.](https://github.com/AliOKeeffe/word-Py/blob/main/run.py)
 
+- Had assistence with [bare except clause error](https://www.30secondsofcode.org/python/s/bare-except/).
+
+- Used a devider from [Ascii Art](https://www.asciiart.eu/art-and-design/dividers)  
+
 
 
 
