@@ -160,7 +160,7 @@ A function appends all the input data to the spreadsheet, where the information 
 
 <details>
 
-
+![Pep8 validation error](docs_readme_imgs/pep8_validation_error.png)
  
 </details>
 
@@ -179,6 +179,8 @@ A function appends all the input data to the spreadsheet, where the information 
 - Used [Python Tutor](https://pythontutor.com/cp/composingprograms.html#mode=edit) for problem solving help.
 
 - Tested all external andd image links provided in the readme file.
+
+- Fixed grammer and typing errors using [Grammarly](https://www.grammarly.com/) 
  
 
 
