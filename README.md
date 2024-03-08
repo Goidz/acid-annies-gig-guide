@@ -139,10 +139,13 @@ Following the questions the input from the user is compiled in a final message s
 ![Resulting message_1](docs_readme_imgs/result_one.png)
 ![Resulting message_2](docs_readme_imgs/result_two.png)
 
+
 ### Saving data to Google Sheets:
 
-The final step in the process is for the data collected to be saved in a spreadsheet on a Google Sheets API.
-A function appends all the input data in rows under headings.
+The final step in the process is for the user input to be saved in a spreadsheet on a Google Sheets API.
+A function appends all the input data to the spreadsheet, where the information is sorted by column and each line corresponds to an event. In this way, the input data can be pulled up in a hypothetical app where users can search for events by applying filters such as date, ganre, or location.
+
+
 
 
 
@@ -157,6 +160,8 @@ A function appends all the input data in rows under headings.
   The iphones did not run past the welcome message.
 
 - The user input were tested for all functions making sure that the error messages gets applied when neccessary and correctly.
+
+- Used [Python Tutor](https://pythontutor.com/cp/composingprograms.html#mode=edit) for problem solving help.
 
 
 
