@@ -294,7 +294,7 @@ def save_event(date, genre, title, venue, venue_map,
     https://github.com/AliOKeeffe/word-Py/blob/main/run.py
     """
     SHEET.worksheet('aunty_acids_guide_to_mayhem').append_row([date.isoformat(), genre, title, venue, venue_map, city, artist_link, info, tickets])
-    # 295: E501 line too long (147 > 79 characters). Don't know how to fix
+    # 296: E501 line too long (147 > 79 chars). Don't know how to fix it.
 
 
 """
